@@ -1,0 +1,11 @@
+city name,x,y
+Calgary
+367
+661
+Edmonton
+375
+625
+Montreal
+802
+737
+
