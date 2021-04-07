@@ -73,19 +73,19 @@ public class ShapeTree {
      * @param childShape
      * @return
      */
-
     public boolean checkNode(NaryTreeNode<Shape> parentNode, Shape childShape){
         Shape parentShape = parentNode.getData();
+        boolean validity = true;
 
         if((parentShape.getNumSides() > parentNode.getNumChildren()) && (parentShape.getColour() != childShape.getColour())){
             for (int i = 0; i < parentNode.getNumChildren(); i++){
                 if(parentNode.getChild(i).getData().getColour() == childShape.getColour()){
-                    return false;
+                    return !validity;
                 }
             }
-            return true;
+            return validity;
         }
-        return false;
+        return !validity;
     }
 
 
